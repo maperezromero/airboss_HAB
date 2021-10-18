@@ -105,7 +105,7 @@ export const ConfirmPassengersScreen = ({ history }) => {
     function editTraveler(id) {
         setAnimation('animate__backInDown');
         //{showEditTravelerForm && <PassengersForm  travelersInfo={travelersInfo} currentTraveler={currentTraveler}/>}
-        console.log('92::::::', id);
+        // console.log('92::::::', id);
         setCurrentTraveler(id);
         setShowEditTravelerForm(true);
         setOpacity({
@@ -155,7 +155,7 @@ export const ConfirmPassengersScreen = ({ history }) => {
                 showInfo: true,
                 info: 'No se ha podido completar la reserva',
             });
-            console.log(error);
+            // console.log(error);
         }
     }
     const handleChangePassenger = (event, key) => {

@@ -65,7 +65,7 @@ export const FlightSelectionScreen = ({ history }) => {
         setDataResults('');
         history.push(`/searches${querysAPI}`);
         const getFlights = async () => {
-            console.log('useEffect_IDUSER:::', idUser);
+            // console.log('useEffect_IDUSER:::', idUser);
             const { data } = await axios.post(
                 `http://localhost:3001/searches${querysAPI}`,
                 { idUser: idUser }

@@ -53,7 +53,7 @@ function SelectedFlightInfo({ dataResults }) {
 
     function generatePDF() {
         const contenedorToPDF = document.getElementById('generate-pdf-content');
-        console.log(contenedorToPDF);
+        // console.log(contenedorToPDF);
         html2canvas(contenedorToPDF, {
             ignoreElements: function (element) {
                 if (element.classList.contains('not-to-pdf')) {
@@ -177,7 +177,7 @@ function SelectedFlightInfo({ dataResults }) {
         };
 
         if (dataResults) {
-            console.log('dataResults:', dataResults);
+            // console.log('dataResults:', dataResults);
 
             departureCityCall(departureCity);
 
@@ -270,7 +270,7 @@ function SelectedFlightInfo({ dataResults }) {
                     }
                 );
                 // saveTravelers = res.data.data;
-                console.log('251:::::::::::', res.data.data);
+                // console.log('251:::::::::::', res.data.data);
 
                 let passengers = [];
                 res.data.data?.map((traveler) => {

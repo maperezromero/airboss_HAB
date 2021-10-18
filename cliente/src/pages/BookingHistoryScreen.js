@@ -45,7 +45,7 @@ export const BookingHistoryScreen = () => {
                     // console.log('data:', data);
                     // Si no hay resultados muestro aviso en pantalla
                     if (data?.data?.length === 0) {
-                        console.log('No hay datos!!');
+                        // console.log('No hay datos!!');
                         setValues({
                             ...values,
                             info: 'No hay resultados con la búsqueda indicada.',

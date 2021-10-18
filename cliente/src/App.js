@@ -110,7 +110,7 @@ export const App = () => {
                             console.log(error);
                         }
                     } else {
-                        console.log('HAY UN PROBLEMA EN EL LOGADO');
+                        //console.log('HAY UN PROBLEMA EN EL LOGADO');
                         setLogin(false);
                     }
                 }

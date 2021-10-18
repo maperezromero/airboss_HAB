@@ -92,7 +92,7 @@ async function sendMailBooking({ to, subject, body, passengers }) {
         };
         await sgMail.send(msg);
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         throw new Error('Error enviando email');
     }
 }
@@ -136,9 +136,9 @@ function generateRandomString(length) {
 async function savePhoto(image) {
     // Comprobamos que el directorio de subida de imágenes existe.
     // console.log('DENTRO DE SAVEPHOTO', UPLOADS_DIRECTORY);
-    console.log('Se guarda!');
+    // console.log('Se guarda!');
     await ensureDir(UPLOADS_DIRECTORY, (err) => {
-        console.log(err);
+        // console.log(err);
     });
     // Leer la imagen con sharp.
     const sharpImage = sharp(image.data);
@@ -200,7 +200,7 @@ const googleVerify = async (idToken = '') => {
         //console.log(name, picture, email);
         return { name, picture, email };
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
 

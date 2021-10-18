@@ -75,7 +75,7 @@ function RestorePasswordForm() {
     async function onSubmitLogin(event) {
         //console.log('ENTRA EN SUBMIT');
         event.preventDefault();
-        console.log(values.email);
+        // console.log(values.email);
         if (validator.isEmail(values.email)) {
             const body = {
                 email: values.email,
@@ -97,7 +97,7 @@ function RestorePasswordForm() {
                     }, 2000);
                 }
             } catch (error) {
-                console.log(error);
+                // console.log(error);
                 setValues({
                     ...values,
                     error: 'Ha habido un error',

@@ -20,7 +20,7 @@ export const ValidateScreen = ({ history, match }) => {
                 `http://localhost:3001/users/validate/${code}`
             );
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             if (data.status === 'ok') {
                 setLogin(true);
                 setNameUser(`${data.name} ${data.lastname}`);

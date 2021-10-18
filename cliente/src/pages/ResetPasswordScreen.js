@@ -15,7 +15,7 @@ export const ResetPasswordScreen = ({ history, match }) => {
         error: '',
     });
     useEffect(() => {
-        console.log('DENTRO DE RESET PASSWORD');
+        // console.log('DENTRO DE RESET PASSWORD');
         // code = match.params.recoverCode;
         //console.log(code);
 

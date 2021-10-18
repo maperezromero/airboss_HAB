@@ -118,7 +118,7 @@ export const ProfileScreen = ({ history, match }) => {
         setPicture(URL.createObjectURL(event.target.files[0]));
         async function changeAvatar() {
             try {
-                console.log('entro en avatar');
+                // console.log('entro en avatar');
                 const token = localStorage.getItem('userToken');
                 const typeAuth = localStorage.getItem('typeAuth');
                 const formData = new FormData();
@@ -262,10 +262,10 @@ export const ProfileScreen = ({ history, match }) => {
         setValues({ ...values, phone: event.replace(/\s/g, '') });
     };
     const handleChangeNationality = (event) => {
-        console.log(event);
+        // console.log(event);
         const country =
             countries[event.currentTarget.dataset.optionIndex]?.label;
-        console.log(country);
+        // console.log(country);
         setValues({ ...values, nationality: country });
     };
     return (
