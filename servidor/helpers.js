@@ -42,7 +42,7 @@ function formatDuration(duration) {
  * ##################
  */
 
-async function sendMail({ to, subject, body }) {
+async function sendMail({ to, subject, body, url }) {
     try {
         const msg = {
             to,
@@ -53,6 +53,7 @@ async function sendMail({ to, subject, body }) {
                 <div>
                     <h1>${subject}</h1>
                     <p>${body}</p>
+                    <a href=${url}>Clica aquí</a> 
                 </div>
             `,
         };
@@ -71,13 +72,6 @@ async function sendMail({ to, subject, body }) {
 
 async function sendMailBooking({ to, subject, body, passengers }) {
     try {
-        console.log('DENTRO DE SENDMAIL**************************************');
-        console.log('to:::', to);
-        console.log('body:::', body);
-        console.log('passengers:::', passengers);
-
-       
-
         let passengersList='';
         for (const passenger of passengers){
             passengersList += `- ${passenger.name.firstName} ${passenger.name.lastName} <br>`; 

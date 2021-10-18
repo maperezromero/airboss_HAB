@@ -47,7 +47,7 @@ const newUser = async (req, res, next) => {
         // Mensaje que enviaremos al usuario.
         const emailBody = `
             Has solicitado el registro en airboss.
-            Pulsa en este link para verificar tu cuenta: ${process.env.PUBLIC_HOST}/users/validate/${registrationCode}
+            Pulsa abajo para completar el registro. Gracias!
         `;
 
         // Enviamos el mensaje.
@@ -55,6 +55,7 @@ const newUser = async (req, res, next) => {
             to: email,
             subject: 'Activa tu usuario de airboss',
             body: emailBody,
+            url: `${process.env.PUBLIC_HOST}/users/validate/${registrationCode}`
         });
 
         // Guardamos al usuario en la base de datos junto al código de registro.
