@@ -66,7 +66,7 @@ const loginUser = async (req, res, next) => {
                 nationality,
                 createdAt,
                 birthDate,
-                avatar: `http://localhost:3001/static/uploads/${avatar}`,
+                avatar: `${process.env.REACT_APP_NODE_URL}/static/uploads/${avatar}`,
                 idUser,
             },
         });

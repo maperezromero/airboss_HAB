@@ -96,7 +96,7 @@ function ResetPasswordForm({ code }) {
             };
             try {
                 const res = await axios.put(
-                    'http://localhost:3001/users/password/reset',
+                    `${process.env.REACT_APP_NODE_URL}/users/password/reset`,
                     body
                 );
 

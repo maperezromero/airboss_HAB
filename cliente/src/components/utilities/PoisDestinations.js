@@ -20,7 +20,7 @@ export const PoisDestinations = ({ destinationLocationCode }) => {
             setCurrentCity(city[0].name);
             const apiCall = async () => {
                 const { data } = await axios.get(
-                    'http://localhost:3001/poisDestination',
+                    `${process.env.REACT_APP_NODE_URL}/poisDestination`,
                     {
                         params: {
                             north: city[0].north,

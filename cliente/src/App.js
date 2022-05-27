@@ -73,7 +73,7 @@ export const App = () => {
             try {
                 async function validateToken() {
                     const res = await axios.get(
-                        `http://localhost:3001/users/validate-token/${typeAuth}`,
+                        `${process.env.REACT_APP_NODE_URL}/users/validate-token/${typeAuth}`,
                         {
                             headers: {
                                 'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export const App = () => {
                     if (res.data.status === 'ok') {
                         try {
                             const { data } = await axios.get(
-                                `http://localhost:3001/users/id/${idUser}`
+                                `${process.env.REACT_APP_NODE_URL}/users/id/${idUser}`
                             );
 
                             const currentUser = data.data;
@@ -126,7 +126,7 @@ export const App = () => {
             try {
                 async function validateToken() {
                     const res = await axios.get(
-                        `http://localhost:3001/users/validate-token/${typeAuth}`,
+                        `${process.env.REACT_APP_NODE_URL}/users/validate-token/${typeAuth}`,
                         {
                             headers: {
                                 'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ export const App = () => {
                     if (res.data.status === 'ok') {
                         try {
                             const { data } = await axios.get(
-                                `http://localhost:3001/users/id/${idUser}`
+                                `${process.env.REACT_APP_NODE_URL}/users/id/${idUser}`
                             );
 
                             const currentUser = data?.data;

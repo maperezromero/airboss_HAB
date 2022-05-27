@@ -51,7 +51,7 @@ export const SelectedFlightDetailsScreen = ({ history }) => {
                 },
             };
             const { data } = await axios.post(
-                `http://localhost:3001/pricing`,
+                `${process.env.REACT_APP_NODE_URL}/pricing`,
                 flightPrincingObject
             );
             if (data) {

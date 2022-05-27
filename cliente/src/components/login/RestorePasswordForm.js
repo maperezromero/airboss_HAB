@@ -82,7 +82,7 @@ function RestorePasswordForm() {
             };
             try {
                 const res = await axios.put(
-                    'http://localhost:3001/users/password/recover',
+                    `${process.env.REACT_APP_NODE_URL}/users/password/recover`,
                     body
                 );
 

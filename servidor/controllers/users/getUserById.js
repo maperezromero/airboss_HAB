@@ -22,7 +22,7 @@ const getUserById = async (req, res, next) => {
         ) {
             // user[0].avatar = ${user[0].avatar};
         } else {
-            user[0].avatar = `http://localhost:3001/static/uploads/${user[0].avatar}`;
+            user[0].avatar = `${process.env.REACT_APP_NODE_URL}/static/uploads/${user[0].avatar}`;
         }
 
         res.send({

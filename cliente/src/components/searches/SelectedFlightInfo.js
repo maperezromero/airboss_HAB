@@ -77,7 +77,7 @@ function SelectedFlightInfo({ dataResults }) {
 
     const covidRestrictionsSearch = async (countryData) => {
         const { data } = await axios.post(
-            'http://localhost:3001/covidRestrictions',
+            `${process.env.REACT_APP_NODE_URL}/covidRestrictions`,
             { ...countryData }
         );
         // console.log('Covid Restrictions: ', data);
@@ -120,7 +120,7 @@ function SelectedFlightInfo({ dataResults }) {
             setShowCity(false);
             if (iataCityCode) {
                 const { data } = await axios.get(
-                    'http://localhost:3001/citySearch',
+                    `${process.env.REACT_APP_NODE_URL}/citySearch`,
                     {
                         params: {
                             keyword: iataCityCode,
@@ -139,7 +139,7 @@ function SelectedFlightInfo({ dataResults }) {
             setShowArrivalCity(false);
             if (iataCityCode) {
                 const { data } = await axios.get(
-                    'http://localhost:3001/citySearch',
+                    `${process.env.REACT_APP_NODE_URL}/citySearch`,
                     {
                         params: {
                             keyword: iataCityCode,
@@ -159,7 +159,7 @@ function SelectedFlightInfo({ dataResults }) {
             setShowDepartureCity(false);
             if (iataCityCode) {
                 const { data } = await axios.get(
-                    'http://localhost:3001/citySearch',
+                    `${process.env.REACT_APP_NODE_URL}/citySearch`,
                     {
                         params: {
                             keyword: iataCityCode,
@@ -264,7 +264,7 @@ function SelectedFlightInfo({ dataResults }) {
             try {
                 // console.log('myHeaders: ', myHeaders);
                 const res = await axios.get(
-                    `http://localhost:3001/passengers/`,
+                    `${process.env.REACT_APP_NODE_URL}/passengers/`,
                     {
                         headers: myHeaders,
                     }

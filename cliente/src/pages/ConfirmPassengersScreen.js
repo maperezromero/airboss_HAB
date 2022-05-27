@@ -124,7 +124,7 @@ export const ConfirmPassengersScreen = ({ history }) => {
                 travelers: travelersInfo,
             };
 
-            const res = await axios.post('http://localhost:3001/booking', body);
+            const res = await axios.post(`${process.env.REACT_APP_NODE_URL}/booking`, body);
             // console.log(res);
             // console.log(res.data.data.data.id);
 

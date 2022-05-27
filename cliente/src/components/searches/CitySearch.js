@@ -15,7 +15,7 @@ export default function CitySearch({ label, setInput, input }) {
         if (inputText.length > 0) {
             const apiCall = async () => {
                 const { data } = await axios.get(
-                    'http://localhost:3001/citySearch',
+                    `${process.env.REACT_APP_NODE_URL}/citySearch`,
                     {
                         params: {
                             keyword: inputText,

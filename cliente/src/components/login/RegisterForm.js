@@ -162,7 +162,7 @@ function RegisterForm({ history }) {
             });
             return;
         }
-        const response = await fetch('http://localhost:3001/users/', {
+        const response = await fetch(`${process.env.REACT_APP_NODE_URL}/users/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

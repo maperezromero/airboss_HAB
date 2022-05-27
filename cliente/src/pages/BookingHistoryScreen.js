@@ -38,7 +38,7 @@ export const BookingHistoryScreen = () => {
         const getUserBooking = async () => {
             if (idUser) {
                 const { data } = await axios.get(
-                    `http://localhost:3001/allBooking/${idUser}`
+                    `${process.env.REACT_APP_NODE_URL}/allBooking/${idUser}`
                 );
                 if (data) {
                     setDataResults(data);

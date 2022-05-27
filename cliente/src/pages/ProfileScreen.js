@@ -126,7 +126,7 @@ export const ProfileScreen = ({ history, match }) => {
                 formData.append('email', email);
 
                 const res = await axios.post(
-                    'http://localhost:3001/users/avatar',
+                    `${process.env.REACT_APP_NODE_URL}/users/avatar`,
                     formData,
                     {
                         headers: {
@@ -167,7 +167,7 @@ export const ProfileScreen = ({ history, match }) => {
 
         try {
             const { data } = await axios.put(
-                `http://localhost:3001/users/${localStorage.getItem('idUser')}`,
+                `${process.env.REACT_APP_NODE_URL}/users/${localStorage.getItem('idUser')}`,
                 body,
                 {
                     headers: {

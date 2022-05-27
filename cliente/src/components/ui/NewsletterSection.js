@@ -19,7 +19,7 @@ export const NewsletterSection = () => {
 
         const validateNewsletter = async () => {
             const { data } = await axios.post(
-                'http://localhost:3001/newsletter',
+                `${process.env.REACT_APP_NODE_URL}/newsletter`,
                 {
                     email,
                 }

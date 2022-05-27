@@ -109,7 +109,7 @@ function LoginForm() {
                 try {
                     //Verifico si esta el usuario registrado
                     const { data } = await axios.get(
-                        `http://localhost:3001/users/${response?.profileObj?.email}`
+                        `${process.env.REACT_APP_NODE_URL}/users/${response?.profileObj?.email}`
                     );
                     const currentUser = data.data;
 
@@ -119,7 +119,7 @@ function LoginForm() {
                         try {
                             async function loginGoogle() {
                                 const res = await axios.get(
-                                    'http://localhost:3001/users/validate-token/google',
+                                    `${process.env.REACT_APP_NODE_URL}/users/validate-token/google`,
                                     {
                                         headers: {
                                             'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function LoginForm() {
                             };
 
                             const { data } = await axios.post(
-                                `http://localhost:3001/users`,
+                                `${process.env.REACT_APP_NODE_URL}/users`,
                                 currentUser
                             );
 
@@ -189,7 +189,7 @@ function LoginForm() {
                                 try {
                                     async function loginGoogle() {
                                         const res = await axios.get(
-                                            'http://localhost:3001/users/validate-token/google',
+                                            `${process.env.REACT_APP_NODE_URL}/users/validate-token/google`,
                                             {
                                                 headers: {
                                                     'Content-Type':
@@ -303,7 +303,7 @@ function LoginForm() {
         async function login() {
             try {
                 const { data } = await axios.post(
-                    'http://localhost:3001/users/login',
+                    `${process.env.REACT_APP_NODE_URL}/users/login`,
                     body
                 );
 

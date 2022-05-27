@@ -17,7 +17,7 @@ export const ValidateScreen = ({ history, match }) => {
         async function sendValidation() {
             const code = match.params.registrationCode;
             const response = await fetch(
-                `http://localhost:3001/users/validate/${code}`
+                `${process.env.REACT_APP_NODE_URL}/users/validate/${code}`
             );
             const data = await response.json();
             // console.log(data);
